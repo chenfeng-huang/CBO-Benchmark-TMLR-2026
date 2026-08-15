@@ -1,0 +1,7 @@
+{
+  "dataset": "synthetic",
+  "target": "Y",
+  "task": "min",
+  "global_best_value": -4.4474,
+  "num_outcomes": 4500
+}

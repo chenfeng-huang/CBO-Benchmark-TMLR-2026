@@ -1,0 +1,124 @@
+{
+  "variables": {
+    "F": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "U_F ~ N(0,1)"
+      }
+    },
+    "A": {
+      "type": "endogenous",
+      "dependencies": [
+        "F"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "F": 1.0
+      },
+      "relationship_type": "quadratic_latent",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "function": "F^2 + U1",
+        "latent_variables": [
+          "U1"
+        ]
+      }
+    },
+    "B": {
+      "type": "endogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "coefficients": {},
+      "relationship_type": "latent",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "function": "U2",
+        "latent_variables": [
+          "U2"
+        ]
+      }
+    },
+    "C": {
+      "type": "endogenous",
+      "dependencies": [
+        "B"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "B": 1.0
+      },
+      "relationship_type": "exponential",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "function": "exp(-B)"
+      }
+    },
+    "D": {
+      "type": "endogenous",
+      "dependencies": [
+        "C"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "C": 1.0
+      },
+      "relationship_type": "scaled_exponential",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "function": "exp(-C)/10",
+        "scale_factor": 0.1
+      }
+    },
+    "E": {
+      "type": "endogenous",
+      "dependencies": [
+        "A",
+        "C"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "A": 1.0,
+        "C": 0.1
+      },
+      "relationship_type": "trigonometric_mixed",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "function": "cos(A) + C/10"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "D",
+        "E"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "D": 1.0,
+        "E": 1.0
+      },
+      "relationship_type": "complex_trigonometric_latent",
+      "relationship_params": {
+        "noise_std": 0.1,
+        "function": "cos(D) + sin(E) + U1 + U2*\u03b5_y, \u03b5_y ~ N(0, 0.1)",
+        "latent_variables": [
+          "U1",
+          "U2"
+        ]
+      }
+    }
+  },
+  "causal_order": [
+    "F",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "Y"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "variables": {
+    "X": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -5.0,
+        "max_val": 5.0
+      }
+    },
+    "Z": {
+      "type": "endogenous",
+      "dependencies": [
+        "X"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "X": 1.0
+      },
+      "relationship_type": "exponential",
+      "relationship_params": {
+        "noise_std": 0.1,
+        "function": "exp(-X)"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "Z"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "Z": 1.0
+      },
+      "relationship_type": "trigonometric",
+      "relationship_params": {
+        "noise_std": 0.1,
+        "function": "cos(Z) - exp(-Z/20)"
+      }
+    }
+  },
+  "causal_order": [
+    "X",
+    "Z",
+    "Y"
+  ]
+}

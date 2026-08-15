@@ -1,0 +1,78 @@
+{
+  "variables": {
+    "X": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "U_X ~ N(0,1)"
+      }
+    },
+    "W": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "U_W ~ N(0,1)"
+      }
+    },
+    "Z": {
+      "type": "endogenous",
+      "dependencies": [
+        "X"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "X": -0.5
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "Z = -0.5*X + U_Z"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "X",
+        "W",
+        "Z"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "W": -1.0,
+        "X": 0.0,
+        "Z": 0.0
+      },
+      "relationship_type": "interaction_linear",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "interactions": [
+          {
+            "variables": [
+              "Z",
+              "X"
+            ],
+            "coefficient": -3.0
+          }
+        ],
+        "function": "Y = -W - 3*Z*X + U_Y"
+      }
+    }
+  },
+  "causal_order": [
+    "X",
+    "W",
+    "Z",
+    "Y"
+  ],
+  "interventional_variables": [
+    "Z",
+    "W"
+  ],
+  "target_variable": "Y"
+}

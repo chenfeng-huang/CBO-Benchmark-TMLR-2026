@@ -1,0 +1,134 @@
+{
+  "variables": {
+    "PKC": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 15.018968347010551,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": 1.0,
+        "max_val": 106.0
+      }
+    },
+    "PKA": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKC"
+      ],
+      "intercept": 554.3907305751273,
+      "coefficients": {
+        "PKC": 0.8411525573301047
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 427.43799602174334
+      }
+    },
+    "Raf": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKC",
+        "PKA"
+      ],
+      "intercept": 62.199045961323414,
+      "coefficients": {
+        "PKC": -0.17774509086121948,
+        "PKA": -0.0003792075216956362
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 41.76878172507802
+      }
+    },
+    "Mek": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKC",
+        "PKA",
+        "Raf"
+      ],
+      "intercept": -1.0902746220577555,
+      "coefficients": {
+        "PKC": 0.03966245723060245,
+        "PKA": -0.0006520266851554879,
+        "Raf": 0.5208447051064984
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 16.695865110803133
+      }
+    },
+    "P38": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKC",
+        "PKA"
+      ],
+      "intercept": 15.144327731160235,
+      "coefficients": {
+        "PKC": 1.2347832903144826,
+        "PKA": 0.000590540235751414
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 13.111163757152335
+      }
+    },
+    "Jnk": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKC",
+        "PKA"
+      ],
+      "intercept": 52.9536028509298,
+      "coefficients": {
+        "PKC": -0.7648011883501407,
+        "PKA": -0.005306096821872689
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 42.074714667865486
+      }
+    },
+    "Akt": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKA"
+      ],
+      "intercept": -31.110747106386974,
+      "coefficients": {
+        "PKA": 0.12890532877586242
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 113.95850408157932
+      }
+    },
+    "Erk": {
+      "type": "endogenous",
+      "dependencies": [
+        "PKA",
+        "Mek"
+      ],
+      "intercept": -23.248743333459377,
+      "coefficients": {
+        "PKA": 0.08170673252473967,
+        "Mek": -0.029885814321525
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 82.76019809593954
+      }
+    }
+  },
+  "causal_order": [
+    "PKC",
+    "PKA",
+    "Raf",
+    "Mek",
+    "P38",
+    "Jnk",
+    "Akt",
+    "Erk"
+  ]
+}

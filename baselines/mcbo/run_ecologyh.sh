@@ -1,0 +1,4 @@
+#!/bin/sh
+HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+BENCHMARK_ROOT=$(CDPATH= cd -- "$HERE/../.." && pwd)
+exec sh "$BENCHMARK_ROOT/scripts/hard_internvention/run_mcbo.sh" "${1:-100}" "${2:-42}" ecology

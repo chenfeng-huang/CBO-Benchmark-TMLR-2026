@@ -1,0 +1,110 @@
+{
+  "variables": {
+    "Age": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 65.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": 55,
+        "max_val": 75
+      }
+    },
+    "BMI": {
+      "type": "endogenous",
+      "dependencies": [
+        "Age"
+      ],
+      "intercept": 27.0,
+      "coefficients": {
+        "Age": -0.01
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.7
+      }
+    },
+    "Aspirin": {
+      "type": "endogenous",
+      "dependencies": [
+        "Age",
+        "BMI"
+      ],
+      "intercept": -8.0,
+      "coefficients": {
+        "Age": 0.1,
+        "BMI": 0.03
+      },
+      "relationship_type": "sigmoid",
+      "relationship_params": {
+        "noise_std": 0.0
+      }
+    },
+    "Statin": {
+      "type": "endogenous",
+      "dependencies": [
+        "Age",
+        "BMI"
+      ],
+      "intercept": -13.0,
+      "coefficients": {
+        "Age": 0.1,
+        "BMI": 0.2
+      },
+      "relationship_type": "sigmoid",
+      "relationship_params": {
+        "noise_std": 0.0
+      }
+    },
+    "cancer": {
+      "type": "endogenous",
+      "dependencies": [
+        "Age",
+        "BMI",
+        "Statin",
+        "Aspirin"
+      ],
+      "intercept": 2.2,
+      "coefficients": {
+        "Age": -0.05,
+        "BMI": 0.01,
+        "Statin": -0.04,
+        "Aspirin": 0.02
+      },
+      "relationship_type": "sigmoid",
+      "relationship_params": {
+        "noise_std": 0.0
+      }
+    },
+    "PSA": {
+      "type": "endogenous",
+      "dependencies": [
+        "Age",
+        "BMI",
+        "Statin",
+        "Aspirin",
+        "cancer"
+      ],
+      "intercept": 6.8,
+      "coefficients": {
+        "Age": 0.04,
+        "BMI": -0.15,
+        "Statin": -0.6,
+        "Aspirin": 0.55,
+        "cancer": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.4
+      }
+    }
+  },
+  "causal_order": [
+    "Age",
+    "BMI",
+    "Aspirin",
+    "Statin",
+    "cancer",
+    "PSA"
+  ]
+}

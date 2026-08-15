@@ -1,0 +1,14 @@
+causal_learn==0.1.4.0
+numpy>=1.18.0
+pandas>=1.0.0
+matplotlib>=3.2.0
+scikit-learn>=0.22.0
+scipy>=1.4.0
+pydot>=1.4.0
+graphviz>=0.13.0
+PyYAML>=5.3.0
+GPy>=1.9.0
+emukit>=0.4.0
+networkx>=2.5.0
+sympy>=1.6.0
+paramz>=0.9.0

@@ -1,0 +1,6 @@
+{
+  "dataset": "chain_soft",
+  "target": "Y",
+  "task": "min",
+  "global_best_value": -3.3936
+}

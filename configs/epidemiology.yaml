@@ -1,0 +1,16 @@
+target: Y
+task: min
+num_intervention: 1
+num_observations: 200
+
+intervention:
+  - L
+  - B
+
+interventional_domain:
+  L:
+    - 0.479
+    - 801.787
+  B:
+    - -0.994
+    - 0.999

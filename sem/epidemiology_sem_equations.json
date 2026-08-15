@@ -1,0 +1,100 @@
+{
+  "variables": {
+    "B": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "function": "B = U[-1, 1]"
+      }
+    },
+    "T": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": 4.0,
+        "max_val": 8.0,
+        "function": "T = U[4, 8]"
+      }
+    },
+    "L": {
+      "type": "endogenous",
+      "dependencies": [
+        "T"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "T": 0.5
+      },
+      "relationship_type": "exponential_linear",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "L = exp(0.5 * T + U) where U ~ N(0,1)"
+      }
+    },
+    "R": {
+      "type": "endogenous",
+      "dependencies": [
+        "L",
+        "T"
+      ],
+      "intercept": 4.0,
+      "coefficients": {
+        "L": 0.0,
+        "T": 0.0
+      },
+      "relationship_type": "interaction_linear",
+      "relationship_params": {
+        "noise_std": 0.0,
+        "interactions": [
+          {
+            "variables": [
+              "L",
+              "T"
+            ],
+            "coefficient": 1.0
+          }
+        ],
+        "function": "R = 4 + L * T"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "T",
+        "L",
+        "R",
+        "B"
+      ],
+      "intercept": 0.5,
+      "coefficients": {
+        "T": 1.0,
+        "L": 1.0,
+        "R": 2.0,
+        "B": 1.0
+      },
+      "relationship_type": "complex_trigonometric",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "Y = 0.5 + cos(4*T) + sin(-L + 2*R) + B + \u03b5 where \u03b5 ~ N(0,1)"
+      }
+    }
+  },
+  "causal_order": [
+    "B",
+    "T",
+    "L",
+    "R",
+    "Y"
+  ],
+  "interventional_variables": [
+    "L",
+    "B"
+  ],
+  "target_variable": "Y"
+}

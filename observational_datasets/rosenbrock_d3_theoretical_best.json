@@ -1,0 +1,6 @@
+{
+  "dataset": "rosenbrock_d3",
+  "target": "Y",
+  "task": "max",
+  "global_best_value": 0.0
+}

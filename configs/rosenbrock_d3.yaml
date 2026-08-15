@@ -1,0 +1,12 @@
+target: Y
+num_intervention: 3
+intervention:
+  - x0
+  - x1
+  - x2
+num_observations: 0
+task: max
+interventional_domain:
+  x0: [0.0, 1.0]
+  x1: [0.0, 1.0]
+  x2: [0.0, 1.0]

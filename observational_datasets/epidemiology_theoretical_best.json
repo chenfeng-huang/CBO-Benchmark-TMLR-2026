@@ -1,0 +1,13 @@
+{
+  "best_intervention": {
+    "L": 736.3374529332503,
+    "B": -0.9061502201039084
+  },
+  "global_best_value": -3.3906,
+  "task": "min",
+  "target": "Y",
+  "manipulative_variables": [
+    "L",
+    "B"
+  ]
+}

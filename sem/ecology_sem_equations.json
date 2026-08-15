@@ -1,0 +1,195 @@
+{
+  "variables": {
+    "E": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 24.184130434782606,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 3.2204054790158585,
+        "min_val": 18.28,
+        "max_val": 29.5,
+        "function": "U_E ~ N(24.184, 3.220)"
+      }
+    },
+    "S": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 36.591623913043485,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 0.14919708693132147,
+        "min_val": 36.169,
+        "max_val": 36.8806,
+        "function": "U_S ~ N(36.592, 0.149)"
+      }
+    },
+    "N": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.4920652173913041,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.5924077981635778,
+        "min_val": -1.475,
+        "max_val": 4.31,
+        "function": "U_N ~ N(0.492, 1.592)"
+      }
+    },
+    "T": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 2357.893695652174,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 27.609355287148222,
+        "min_val": 2298.84,
+        "max_val": 2406.71,
+        "function": "U_T ~ N(2357.894, 27.609)"
+      }
+    },
+    "X": {
+      "type": "endogenous",
+      "dependencies": [
+        "E"
+      ],
+      "intercept": 18.79817390034509,
+      "coefficients": {
+        "E": 15.797383660309157
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 28.896638707243493,
+        "r2_score": 0.7519936923128574,
+        "function": "X = 18.798174 + 15.797384*E + U_X"
+      }
+    },
+    "C": {
+      "type": "endogenous",
+      "dependencies": [
+        "N"
+      ],
+      "intercept": 0.37342021355081695,
+      "coefficients": {
+        "N": -0.0024002572713753005
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.039295137153226196,
+        "r2_score": 0.009170649737532677,
+        "function": "C = 0.373420 - 0.002400*N + U_C"
+      }
+    },
+    "L": {
+      "type": "endogenous",
+      "dependencies": [
+        "C"
+      ],
+      "intercept": 6665.081995591907,
+      "coefficients": {
+        "C": -10737.462582329481
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 1546.9130344410867,
+        "r2_score": 0.06984055539705414,
+        "function": "L = 6665.081996 - 10737.462582*C + U_L"
+      }
+    },
+    "P": {
+      "type": "endogenous",
+      "dependencies": [
+        "X"
+      ],
+      "intercept": 8.427705924233592,
+      "coefficients": {
+        "X": -0.0009655314986363629
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.005258257571036228,
+        "r2_score": 0.9912680747598468,
+        "function": "P = 8.427706 - 0.000966*X + U_P"
+      }
+    },
+    "D": {
+      "type": "endogenous",
+      "dependencies": [
+        "X"
+      ],
+      "intercept": 2131.6721072369096,
+      "coefficients": {
+        "X": -0.2165604666734924
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 18.412099847093625,
+        "r2_score": 0.3177707801743257,
+        "function": "D = 2131.672107 - 0.216560*X + U_D"
+      }
+    },
+    "O": {
+      "type": "endogenous",
+      "dependencies": [
+        "E",
+        "S",
+        "X"
+      ],
+      "intercept": 3.2452480541052733,
+      "coefficients": {
+        "E": 0.09433222790709161,
+        "S": 0.006753920720864577,
+        "X": -0.005737087151230129
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.03695797753398314,
+        "r2_score": 0.9529476461512212,
+        "function": "O = 3.245248 + 0.094332*E + 0.006754*S - 0.005737*X + U_O"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "L",
+        "N",
+        "P",
+        "O"
+      ],
+      "intercept": 211.4225551648116,
+      "coefficients": {
+        "L": -3.012576882356712e-05,
+        "N": 0.01667959146973974,
+        "P": -25.71927722049691,
+        "O": -0.5004034826468742
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 1.0733401618242278,
+        "r2_score": 0.6559963792881052,
+        "function": "Y = 211.422555 - 0.000030*L + 0.016680*N - 25.719277*P - 0.500403*O + U_Y"
+      }
+    }
+  },
+  "causal_order": [
+    "E",
+    "S",
+    "N",
+    "T",
+    "X",
+    "C",
+    "L",
+    "P",
+    "D",
+    "O",
+    "Y"
+  ],
+  "interventional_variables": [
+    "N",
+    "O",
+    "C",
+    "T",
+    "D"
+  ],
+  "target_variable": "Y"
+}

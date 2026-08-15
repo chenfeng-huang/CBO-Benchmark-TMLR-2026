@@ -1,0 +1,22 @@
+target: Erk
+task: min
+num_intervention: 1
+intervention:
+  - PKC
+  - PKA
+  - Mek
+  - Akt
+num_observations: 250
+interventional_domain:
+  PKC:
+    - 0.5
+    - 106.5
+  PKA:
+    - 1.45
+    - 4491.5
+  Mek:
+    - 0.5
+    - 389.5
+  Akt:
+    - 1.2
+    - 3555.5

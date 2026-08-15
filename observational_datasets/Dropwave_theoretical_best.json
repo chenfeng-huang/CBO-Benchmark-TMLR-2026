@@ -1,0 +1,6 @@
+{
+  "dataset": "dropwave",
+  "target": "Y",
+  "task": "max",
+  "global_best_value": 1
+}

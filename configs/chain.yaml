@@ -1,0 +1,14 @@
+intervention:
+- Z
+- W
+interventional_domain:
+  W:
+  - -1
+  - 1
+  Z:
+  - -1
+  - 1
+num_intervention: 1
+num_observations: 200
+target: Y
+task: min

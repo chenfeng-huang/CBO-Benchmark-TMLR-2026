@@ -1,0 +1,7 @@
+{
+  "dataset": "toyGraph",
+  "target": "Y",
+  "task": "min",
+  "global_best_value": -2.5718,
+  "num_outcomes": 2500
+}

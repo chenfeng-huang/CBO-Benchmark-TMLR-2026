@@ -1,0 +1,6 @@
+{
+  "dataset": "alpine2",
+  "target": "Y",
+  "task": "max",
+  "global_best_value": 400.0
+}

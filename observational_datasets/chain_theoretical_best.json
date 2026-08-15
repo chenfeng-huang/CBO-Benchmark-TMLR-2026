@@ -1,0 +1,7 @@
+{
+  "dataset": "chain",
+  "target": "Y",
+  "task": "min",
+  "global_best_value": -15.8060,
+  "num_outcomes": 2500
+}

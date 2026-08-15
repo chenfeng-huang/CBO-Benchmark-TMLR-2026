@@ -1,0 +1,56 @@
+{
+  "variables": {
+    "X": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "U_X ~ N(0,1)"
+      }
+    },
+    "Z": {
+      "type": "endogenous",
+      "dependencies": [
+        "X"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "X": 1.0
+      },
+      "relationship_type": "exponential_additive",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "exp(-X) + U_Z",
+        "noise_distribution": "N(0,1)"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "Z"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "Z": 1.0
+      },
+      "relationship_type": "trigonometric_exponential_additive",
+      "relationship_params": {
+        "noise_std": 1.0,
+        "function": "cos(Z) - exp(-Z/20) + U_Y",
+        "noise_distribution": "N(0,1)"
+      }
+    }
+  },
+  "causal_order": [
+    "X",
+    "Z",
+    "Y"
+  ],
+  "interventional_variables": [
+    "X",
+    "Z"
+  ],
+  "target_variable": "Y"
+}

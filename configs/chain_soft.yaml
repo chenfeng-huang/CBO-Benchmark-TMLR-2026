@@ -1,0 +1,21 @@
+target: Y
+num_intervention: 4
+intervention:
+  - use_w
+  - w
+  - policy_scale
+  - policy_phase
+num_observations: 0
+task: min
+soft_intervention:
+  context: X
+  target: Z
+  grid_size: 10
+  n_alpha: 10
+  n_beta: 10
+  coefficient_range: [-0.27, 0.27]
+interventional_domain:
+  use_w: [0.0, 1.0]
+  w: [0.0, 1.0]
+  policy_scale: [0.0, 1.0]
+  policy_phase: [0.0, 1.0]

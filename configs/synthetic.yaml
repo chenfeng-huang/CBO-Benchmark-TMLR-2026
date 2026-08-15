@@ -1,0 +1,31 @@
+cols_to_drop:
+
+predetermined_exogenous_vars:
+  - U1
+  - U2
+
+target: Y
+
+num_intervention: 1
+intervention:
+  - B
+  - D
+  - E
+
+interventional_domain:
+  B:
+  - -5
+  - 4
+  D:
+  - -5
+  - 5
+  E:
+  - -6
+  - 3
+  
+g_thr: 0.4
+
+num_observations: 250
+
+task: min
+

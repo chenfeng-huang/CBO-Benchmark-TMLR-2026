@@ -1,0 +1,2316 @@
+{
+  "variables": {
+    "0": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "1": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "2": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "3": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "4": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "5": {
+      "type": "endogenous",
+      "dependencies": [
+        "0"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "6": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "7": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "8": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "9": {
+      "type": "endogenous",
+      "dependencies": [
+        "4"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "10": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "8"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "8": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "11": {
+      "type": "endogenous",
+      "dependencies": [
+        "1"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "12": {
+      "type": "endogenous",
+      "dependencies": [
+        "8"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "8": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "13": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "14": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "15": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "16": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "14"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "14": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "17": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "15"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "15": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "18": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "7",
+        "11"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "7": 1.0,
+        "11": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "19": {
+      "type": "endogenous",
+      "dependencies": [
+        "8"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "8": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "20": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.0,
+      "relationship_type": "uniform",
+      "relationship_params": {
+        "min_val": -1.0,
+        "max_val": 1.0,
+        "noise_std": 1.0
+      }
+    },
+    "21": {
+      "type": "endogenous",
+      "dependencies": [
+        "15"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "15": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "22": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "11"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "11": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "23": {
+      "type": "endogenous",
+      "dependencies": [
+        "9",
+        "12"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "9": 1.0,
+        "12": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "24": {
+      "type": "endogenous",
+      "dependencies": [
+        "13",
+        "22"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "13": 1.0,
+        "22": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "25": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "13",
+        "15"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "13": 1.0,
+        "15": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "26": {
+      "type": "endogenous",
+      "dependencies": [
+        "9"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "9": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "27": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "4",
+        "22"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "4": 1.0,
+        "22": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "28": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "14"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "14": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "29": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "12",
+        "15",
+        "27"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "12": 1.0,
+        "15": 1.0,
+        "27": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "30": {
+      "type": "endogenous",
+      "dependencies": [
+        "19",
+        "23"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "19": 1.0,
+        "23": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "31": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "18"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "18": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "32": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "31"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "31": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "33": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "14",
+        "22"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "14": 1.0,
+        "22": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "34": {
+      "type": "endogenous",
+      "dependencies": [
+        "13",
+        "14",
+        "16",
+        "30"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "13": 1.0,
+        "14": 1.0,
+        "16": 1.0,
+        "30": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "35": {
+      "type": "endogenous",
+      "dependencies": [
+        "19",
+        "33"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "19": 1.0,
+        "33": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "36": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "26"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "26": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "37": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "10",
+        "14",
+        "15",
+        "17",
+        "20",
+        "23"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "10": 1.0,
+        "14": 1.0,
+        "15": 1.0,
+        "17": 1.0,
+        "20": 1.0,
+        "23": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "38": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "4",
+        "8",
+        "16",
+        "17",
+        "19",
+        "35"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "4": 1.0,
+        "8": 1.0,
+        "16": 1.0,
+        "17": 1.0,
+        "19": 1.0,
+        "35": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "39": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "8",
+        "24"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "8": 1.0,
+        "24": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "40": {
+      "type": "endogenous",
+      "dependencies": [
+        "13",
+        "20",
+        "29",
+        "34",
+        "36",
+        "37"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "13": 1.0,
+        "20": 1.0,
+        "29": 1.0,
+        "34": 1.0,
+        "36": 1.0,
+        "37": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "41": {
+      "type": "endogenous",
+      "dependencies": [
+        "8",
+        "19",
+        "22",
+        "26"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "8": 1.0,
+        "19": 1.0,
+        "22": 1.0,
+        "26": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "42": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "14",
+        "24",
+        "36"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "14": 1.0,
+        "24": 1.0,
+        "36": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "43": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "12",
+        "15",
+        "16",
+        "34"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "12": 1.0,
+        "15": 1.0,
+        "16": 1.0,
+        "34": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "44": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "25",
+        "33",
+        "34"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "25": 1.0,
+        "33": 1.0,
+        "34": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "45": {
+      "type": "endogenous",
+      "dependencies": [
+        "23",
+        "27",
+        "35",
+        "37",
+        "40",
+        "42"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "23": 1.0,
+        "27": 1.0,
+        "35": 1.0,
+        "37": 1.0,
+        "40": 1.0,
+        "42": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "46": {
+      "type": "endogenous",
+      "dependencies": [
+        "3",
+        "11",
+        "12",
+        "21",
+        "24",
+        "40"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "3": 1.0,
+        "11": 1.0,
+        "12": 1.0,
+        "21": 1.0,
+        "24": 1.0,
+        "40": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "47": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "12",
+        "25",
+        "27",
+        "35"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "12": 1.0,
+        "25": 1.0,
+        "27": 1.0,
+        "35": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "48": {
+      "type": "endogenous",
+      "dependencies": [
+        "3",
+        "9",
+        "12",
+        "13",
+        "33",
+        "44"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "3": 1.0,
+        "9": 1.0,
+        "12": 1.0,
+        "13": 1.0,
+        "33": 1.0,
+        "44": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "49": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "18",
+        "37"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "18": 1.0,
+        "37": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "50": {
+      "type": "endogenous",
+      "dependencies": [
+        "38"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "38": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "51": {
+      "type": "endogenous",
+      "dependencies": [
+        "12",
+        "21",
+        "23",
+        "27",
+        "42"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "12": 1.0,
+        "21": 1.0,
+        "23": 1.0,
+        "27": 1.0,
+        "42": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "52": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "1",
+        "19",
+        "21",
+        "30",
+        "34",
+        "35",
+        "39",
+        "40",
+        "42"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "1": 1.0,
+        "19": 1.0,
+        "21": 1.0,
+        "30": 1.0,
+        "34": 1.0,
+        "35": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "42": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "53": {
+      "type": "endogenous",
+      "dependencies": [
+        "10",
+        "24",
+        "26",
+        "28",
+        "39",
+        "42",
+        "44"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "10": 1.0,
+        "24": 1.0,
+        "26": 1.0,
+        "28": 1.0,
+        "39": 1.0,
+        "42": 1.0,
+        "44": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "54": {
+      "type": "endogenous",
+      "dependencies": [
+        "21",
+        "24",
+        "27",
+        "49",
+        "52"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "21": 1.0,
+        "24": 1.0,
+        "27": 1.0,
+        "49": 1.0,
+        "52": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "55": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "6",
+        "8",
+        "13",
+        "27",
+        "30",
+        "42",
+        "47",
+        "51"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "6": 1.0,
+        "8": 1.0,
+        "13": 1.0,
+        "27": 1.0,
+        "30": 1.0,
+        "42": 1.0,
+        "47": 1.0,
+        "51": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "56": {
+      "type": "endogenous",
+      "dependencies": [
+        "8",
+        "20",
+        "27"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "8": 1.0,
+        "20": 1.0,
+        "27": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "57": {
+      "type": "endogenous",
+      "dependencies": [
+        "9",
+        "29",
+        "39",
+        "41"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "9": 1.0,
+        "29": 1.0,
+        "39": 1.0,
+        "41": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "58": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "18",
+        "28",
+        "31",
+        "32",
+        "37",
+        "40",
+        "46",
+        "51"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "18": 1.0,
+        "28": 1.0,
+        "31": 1.0,
+        "32": 1.0,
+        "37": 1.0,
+        "40": 1.0,
+        "46": 1.0,
+        "51": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "59": {
+      "type": "endogenous",
+      "dependencies": [
+        "3",
+        "23",
+        "33",
+        "46"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "3": 1.0,
+        "23": 1.0,
+        "33": 1.0,
+        "46": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "60": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "12",
+        "21",
+        "36",
+        "48",
+        "49"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "12": 1.0,
+        "21": 1.0,
+        "36": 1.0,
+        "48": 1.0,
+        "49": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "61": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "28",
+        "35",
+        "42",
+        "43",
+        "44",
+        "53",
+        "55"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "28": 1.0,
+        "35": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "44": 1.0,
+        "53": 1.0,
+        "55": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "62": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "15",
+        "17",
+        "30",
+        "41"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "15": 1.0,
+        "17": 1.0,
+        "30": 1.0,
+        "41": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "63": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "7",
+        "10",
+        "15",
+        "21",
+        "23",
+        "26",
+        "30",
+        "39",
+        "41",
+        "53",
+        "62"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "7": 1.0,
+        "10": 1.0,
+        "15": 1.0,
+        "21": 1.0,
+        "23": 1.0,
+        "26": 1.0,
+        "30": 1.0,
+        "39": 1.0,
+        "41": 1.0,
+        "53": 1.0,
+        "62": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "64": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "42"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "42": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "65": {
+      "type": "endogenous",
+      "dependencies": [
+        "4",
+        "8",
+        "13",
+        "29",
+        "41",
+        "49",
+        "59"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "4": 1.0,
+        "8": 1.0,
+        "13": 1.0,
+        "29": 1.0,
+        "41": 1.0,
+        "49": 1.0,
+        "59": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "66": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "10",
+        "20",
+        "22",
+        "25",
+        "30",
+        "42",
+        "43",
+        "48",
+        "56"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "10": 1.0,
+        "20": 1.0,
+        "22": 1.0,
+        "25": 1.0,
+        "30": 1.0,
+        "42": 1.0,
+        "43": 1.0,
+        "48": 1.0,
+        "56": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "67": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "20",
+        "27",
+        "40",
+        "49"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "20": 1.0,
+        "27": 1.0,
+        "40": 1.0,
+        "49": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "68": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "15",
+        "33",
+        "40",
+        "52",
+        "64"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "15": 1.0,
+        "33": 1.0,
+        "40": 1.0,
+        "52": 1.0,
+        "64": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "69": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "4",
+        "22",
+        "34",
+        "44",
+        "47",
+        "48"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "4": 1.0,
+        "22": 1.0,
+        "34": 1.0,
+        "44": 1.0,
+        "47": 1.0,
+        "48": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "70": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "7",
+        "8",
+        "29",
+        "39",
+        "40",
+        "47",
+        "50",
+        "51",
+        "53",
+        "55",
+        "61",
+        "63"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "7": 1.0,
+        "8": 1.0,
+        "29": 1.0,
+        "39": 1.0,
+        "40": 1.0,
+        "47": 1.0,
+        "50": 1.0,
+        "51": 1.0,
+        "53": 1.0,
+        "55": 1.0,
+        "61": 1.0,
+        "63": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "71": {
+      "type": "endogenous",
+      "dependencies": [
+        "9",
+        "20",
+        "24",
+        "56",
+        "62",
+        "63",
+        "64"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "9": 1.0,
+        "20": 1.0,
+        "24": 1.0,
+        "56": 1.0,
+        "62": 1.0,
+        "63": 1.0,
+        "64": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "72": {
+      "type": "endogenous",
+      "dependencies": [
+        "37",
+        "45",
+        "49",
+        "55",
+        "59",
+        "62",
+        "63"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "37": 1.0,
+        "45": 1.0,
+        "49": 1.0,
+        "55": 1.0,
+        "59": 1.0,
+        "62": 1.0,
+        "63": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "73": {
+      "type": "endogenous",
+      "dependencies": [
+        "3",
+        "12",
+        "19",
+        "26",
+        "35",
+        "44",
+        "49",
+        "54",
+        "68"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "3": 1.0,
+        "12": 1.0,
+        "19": 1.0,
+        "26": 1.0,
+        "35": 1.0,
+        "44": 1.0,
+        "49": 1.0,
+        "54": 1.0,
+        "68": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "74": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "24",
+        "61"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "24": 1.0,
+        "61": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "75": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "2",
+        "5",
+        "9",
+        "14",
+        "19",
+        "26",
+        "38",
+        "58",
+        "67"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "2": 1.0,
+        "5": 1.0,
+        "9": 1.0,
+        "14": 1.0,
+        "19": 1.0,
+        "26": 1.0,
+        "38": 1.0,
+        "58": 1.0,
+        "67": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "76": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "7",
+        "24",
+        "26",
+        "30",
+        "38",
+        "39",
+        "50",
+        "55",
+        "59",
+        "70"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "7": 1.0,
+        "24": 1.0,
+        "26": 1.0,
+        "30": 1.0,
+        "38": 1.0,
+        "39": 1.0,
+        "50": 1.0,
+        "55": 1.0,
+        "59": 1.0,
+        "70": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "77": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "15",
+        "19",
+        "34",
+        "39",
+        "44",
+        "64"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "15": 1.0,
+        "19": 1.0,
+        "34": 1.0,
+        "39": 1.0,
+        "44": 1.0,
+        "64": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "78": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "2",
+        "11",
+        "21",
+        "25",
+        "29",
+        "30",
+        "37",
+        "40",
+        "42",
+        "51",
+        "71",
+        "72"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "2": 1.0,
+        "11": 1.0,
+        "21": 1.0,
+        "25": 1.0,
+        "29": 1.0,
+        "30": 1.0,
+        "37": 1.0,
+        "40": 1.0,
+        "42": 1.0,
+        "51": 1.0,
+        "71": 1.0,
+        "72": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "79": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "15",
+        "23",
+        "25",
+        "32",
+        "49",
+        "54",
+        "60"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "15": 1.0,
+        "23": 1.0,
+        "25": 1.0,
+        "32": 1.0,
+        "49": 1.0,
+        "54": 1.0,
+        "60": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "80": {
+      "type": "endogenous",
+      "dependencies": [
+        "30",
+        "48",
+        "54",
+        "64",
+        "66",
+        "71",
+        "72"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "30": 1.0,
+        "48": 1.0,
+        "54": 1.0,
+        "64": 1.0,
+        "66": 1.0,
+        "71": 1.0,
+        "72": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "81": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "21",
+        "24",
+        "28",
+        "47",
+        "55",
+        "60",
+        "64",
+        "76"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "21": 1.0,
+        "24": 1.0,
+        "28": 1.0,
+        "47": 1.0,
+        "55": 1.0,
+        "60": 1.0,
+        "64": 1.0,
+        "76": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "82": {
+      "type": "endogenous",
+      "dependencies": [
+        "51",
+        "64"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "51": 1.0,
+        "64": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "83": {
+      "type": "endogenous",
+      "dependencies": [
+        "14",
+        "25",
+        "43",
+        "45"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "14": 1.0,
+        "25": 1.0,
+        "43": 1.0,
+        "45": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "84": {
+      "type": "endogenous",
+      "dependencies": [
+        "10",
+        "24",
+        "35",
+        "41",
+        "48",
+        "61",
+        "63",
+        "76",
+        "78",
+        "79"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "10": 1.0,
+        "24": 1.0,
+        "35": 1.0,
+        "41": 1.0,
+        "48": 1.0,
+        "61": 1.0,
+        "63": 1.0,
+        "76": 1.0,
+        "78": 1.0,
+        "79": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "85": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "8",
+        "36",
+        "57",
+        "59",
+        "69",
+        "74",
+        "79",
+        "83"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "8": 1.0,
+        "36": 1.0,
+        "57": 1.0,
+        "59": 1.0,
+        "69": 1.0,
+        "74": 1.0,
+        "79": 1.0,
+        "83": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "86": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "2",
+        "22",
+        "33",
+        "39",
+        "41",
+        "43",
+        "67",
+        "71"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "2": 1.0,
+        "22": 1.0,
+        "33": 1.0,
+        "39": 1.0,
+        "41": 1.0,
+        "43": 1.0,
+        "67": 1.0,
+        "71": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "87": {
+      "type": "endogenous",
+      "dependencies": [
+        "16",
+        "17",
+        "35",
+        "36",
+        "44",
+        "54",
+        "59",
+        "61",
+        "77"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "16": 1.0,
+        "17": 1.0,
+        "35": 1.0,
+        "36": 1.0,
+        "44": 1.0,
+        "54": 1.0,
+        "59": 1.0,
+        "61": 1.0,
+        "77": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "88": {
+      "type": "endogenous",
+      "dependencies": [
+        "5",
+        "39",
+        "44",
+        "50",
+        "55",
+        "68",
+        "82"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "5": 1.0,
+        "39": 1.0,
+        "44": 1.0,
+        "50": 1.0,
+        "55": 1.0,
+        "68": 1.0,
+        "82": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "89": {
+      "type": "endogenous",
+      "dependencies": [
+        "8",
+        "26",
+        "27",
+        "36",
+        "66",
+        "75"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "8": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "36": 1.0,
+        "66": 1.0,
+        "75": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "90": {
+      "type": "endogenous",
+      "dependencies": [
+        "1",
+        "14",
+        "17",
+        "27",
+        "35",
+        "43",
+        "50",
+        "52",
+        "65"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "1": 1.0,
+        "14": 1.0,
+        "17": 1.0,
+        "27": 1.0,
+        "35": 1.0,
+        "43": 1.0,
+        "50": 1.0,
+        "52": 1.0,
+        "65": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "91": {
+      "type": "endogenous",
+      "dependencies": [
+        "6",
+        "15",
+        "32",
+        "41",
+        "51",
+        "55",
+        "62",
+        "70",
+        "74",
+        "84"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "6": 1.0,
+        "15": 1.0,
+        "32": 1.0,
+        "41": 1.0,
+        "51": 1.0,
+        "55": 1.0,
+        "62": 1.0,
+        "70": 1.0,
+        "74": 1.0,
+        "84": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "92": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "21",
+        "25",
+        "30",
+        "37",
+        "52",
+        "55",
+        "84"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "21": 1.0,
+        "25": 1.0,
+        "30": 1.0,
+        "37": 1.0,
+        "52": 1.0,
+        "55": 1.0,
+        "84": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "93": {
+      "type": "endogenous",
+      "dependencies": [
+        "11",
+        "22",
+        "27",
+        "44",
+        "74",
+        "80"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "11": 1.0,
+        "22": 1.0,
+        "27": 1.0,
+        "44": 1.0,
+        "74": 1.0,
+        "80": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "94": {
+      "type": "endogenous",
+      "dependencies": [
+        "7",
+        "17",
+        "40",
+        "54",
+        "63",
+        "81"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "7": 1.0,
+        "17": 1.0,
+        "40": 1.0,
+        "54": 1.0,
+        "63": 1.0,
+        "81": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "95": {
+      "type": "endogenous",
+      "dependencies": [
+        "12",
+        "14",
+        "27",
+        "31",
+        "39",
+        "66",
+        "67",
+        "71",
+        "80",
+        "85"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "12": 1.0,
+        "14": 1.0,
+        "27": 1.0,
+        "31": 1.0,
+        "39": 1.0,
+        "66": 1.0,
+        "67": 1.0,
+        "71": 1.0,
+        "80": 1.0,
+        "85": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "96": {
+      "type": "endogenous",
+      "dependencies": [
+        "12",
+        "18",
+        "23",
+        "42",
+        "59",
+        "62",
+        "64",
+        "66",
+        "70",
+        "80"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "12": 1.0,
+        "18": 1.0,
+        "23": 1.0,
+        "42": 1.0,
+        "59": 1.0,
+        "62": 1.0,
+        "64": 1.0,
+        "66": 1.0,
+        "70": 1.0,
+        "80": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "97": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "28",
+        "33",
+        "44",
+        "70",
+        "78",
+        "95"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "28": 1.0,
+        "33": 1.0,
+        "44": 1.0,
+        "70": 1.0,
+        "78": 1.0,
+        "95": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "98": {
+      "type": "endogenous",
+      "dependencies": [
+        "0",
+        "7",
+        "22",
+        "26",
+        "29",
+        "39",
+        "42",
+        "60",
+        "64",
+        "75",
+        "79",
+        "80"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "0": 1.0,
+        "7": 1.0,
+        "22": 1.0,
+        "26": 1.0,
+        "29": 1.0,
+        "39": 1.0,
+        "42": 1.0,
+        "60": 1.0,
+        "64": 1.0,
+        "75": 1.0,
+        "79": 1.0,
+        "80": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    },
+    "99": {
+      "type": "endogenous",
+      "dependencies": [
+        "2",
+        "4",
+        "19",
+        "26",
+        "27",
+        "34",
+        "57",
+        "85"
+      ],
+      "intercept": 0.0,
+      "coefficients": {
+        "2": 1.0,
+        "4": 1.0,
+        "19": 1.0,
+        "26": 1.0,
+        "27": 1.0,
+        "34": 1.0,
+        "57": 1.0,
+        "85": 1.0
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.1
+      }
+    }
+  }
+,
+  "causal_order": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "59",
+    "60",
+    "61",
+    "62",
+    "63",
+    "64",
+    "65",
+    "66",
+    "67",
+    "68",
+    "69",
+    "70",
+    "71",
+    "72",
+    "73",
+    "74",
+    "75",
+    "76",
+    "77",
+    "78",
+    "79",
+    "80",
+    "81",
+    "82",
+    "83",
+    "84",
+    "85",
+    "86",
+    "87",
+    "88",
+    "89",
+    "90",
+    "91",
+    "92",
+    "93",
+    "94",
+    "95",
+    "96",
+    "97",
+    "98",
+    "99"
+  ]
+,
+  "intervention": ["0","3","6","9","12","15","18","21","24","27","30","33","36","39","42","45","48","51","54","57","60","63","66","69","72","75","78","81","84","87","90","93","96"]
+,
+  "interventional_domain": {
+  "0": [-2.7388114369433336, 2.3118311256428297],
+  "12": [-5.3386512297477395, 6.010945744153117],
+  "15": [-3.025724901882585, 3.1989419097831964],
+  "18": [-7.007902634347026, 3.8647251699017673],
+  "21": [-6.069240406623026, 5.021806497578899],
+  "24": [-5.438664898990481, 6.093397044059066],
+  "27": [-4.42390509635575, 4.948706148210025],
+  "3": [-5.3937739735881465, 5.193222811032951],
+  "30": [-6.649531783041777, 6.303366489686146],
+  "33": [-4.008880523004878, 4.672137300099422],
+  "36": [-6.612906259076132, 6.45534284179919],
+  "39": [-6.4334820780650634, 6.31418625647186],
+  "42": [-3.760382806875561, 4.522318267029169],
+  "45": [-9.596827773642998, 9.409560568198295],
+  "48": [-5.981196069870728, 6.025041655983834],
+  "51": [-8.422773788688628, 8.529300234990437],
+  "54": [-12.962609468080224, 10.496212821760675],
+  "57": [-6.258088659753384, 5.607648192300045],
+  "6": [-4.049877083242235, 4.988561306432083],
+  "60": [-5.188273748129836, 7.980220588488869],
+  "63": [-14.007065191837707, 13.119377905823342],
+  "66": [-13.069126306251198, 14.671141206974042],
+  "69": [-7.522802679311825, 9.886251894628023],
+  "72": [-18.414556154065586, 16.04211816006831],
+  "75": [-10.184277510835088, 11.529297655961857],
+  "78": [-19.7926303006794, 15.18213751239248],
+  "81": [-11.561748654337482, 14.177829426544813],
+  "84": [-11.750636511899257, 9.501492490564287],
+  "87": [-15.315239505437901, 13.99348025351548],
+  "9": [-2.8143497122979007, 2.7955146903335173],
+  "90": [-6.851753764145522, 7.494085579072866],
+  "93": [-8.135815438609857, 6.456752248988043],
+  "96": [-15.381453045222486, 15.801547230170765]
+  }
+,
+  "max_intervention_set_size": 2,
+  "max_joint_gp_size": 2,
+  "num_intervention": 33,
+  "num_observations": 300,
+  "target": "99",
+  "task": "max"
+}

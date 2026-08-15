@@ -1,0 +1,6 @@
+{
+  "dataset": "ackley",
+  "target": "Y",
+  "task": "max",
+  "global_best_value": 0.0
+}

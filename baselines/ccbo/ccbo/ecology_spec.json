@@ -1,0 +1,264 @@
+{
+  "variables": {
+    "L": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 2668.1782608695653,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1621.6601988953646,
+        "min_val": 378.73,
+        "max_val": 6109.3,
+        "function": "U_L ~ N(2668.178, 1621.660)"
+      }
+    },
+    "E": {
+      "type": "endogenous",
+      "dependencies": [
+        "L"
+      ],
+      "intercept": 23.90867335815335,
+      "coefficients": {
+        "L": 0.00010323788356610154
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 3.180901698781036,
+        "r2_score": 0.0027025689771883465,
+        "function": "E = 23.908673 + 0.000103*L + U_E"
+      }
+    },
+    "N": {
+      "type": "exogenous",
+      "dependencies": [],
+      "intercept": 0.4920652173913041,
+      "relationship_type": "normal",
+      "relationship_params": {
+        "noise_std": 1.5924077981635778,
+        "min_val": -1.475,
+        "max_val": 4.31,
+        "function": "U_N ~ N(0.492, 1.592)"
+      }
+    },
+    "X": {
+      "type": "endogenous",
+      "dependencies": [
+        "L",
+        "E"
+      ],
+      "intercept": 9.814446159264094,
+      "coefficients": {
+        "L": 0.004414425359461858,
+        "E": 15.681822505658463
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 28.018178468866793,
+        "r2_score": 0.7668433186154766,
+        "function": "X = 9.814446 + 0.004414*L + 15.681823*E + U_X"
+      }
+    },
+    "S": {
+      "type": "endogenous",
+      "dependencies": [
+        "L",
+        "E"
+      ],
+      "intercept": 37.07501456943837,
+      "coefficients": {
+        "L": 2.363510380159971e-05,
+        "E": -0.02259553338191481
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.12426800018556801,
+        "r2_score": 0.2908416033549116,
+        "function": "S = 37.075015 + 0.000024*L - 0.022596*E + U_S"
+      }
+    },
+    "P": {
+      "type": "endogenous",
+      "dependencies": [
+        "L",
+        "E"
+      ],
+      "intercept": 8.431696103056883,
+      "coefficients": {
+        "L": -4.051271178830178e-06,
+        "E": -0.01572139753068165
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.024141315465203254,
+        "r2_score": 0.8159447713000851,
+        "function": "P = 8.431696 - 0.000004*L - 0.015721*E + U_P"
+      }
+    },
+    "T": {
+      "type": "endogenous",
+      "dependencies": [
+        "E",
+        "X",
+        "S",
+        "P"
+      ],
+      "intercept": -11650.03289314121,
+      "coefficients": {
+        "E": 1.6111424052586867,
+        "X": 1.0758632023818118,
+        "S": 17.873770332633388,
+        "P": 1602.3124328858876
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 10.582106949347487,
+        "r2_score": 0.8498321095162367,
+        "function": "T = -11650.032893 + 1.611142*E + 1.075863*X + 17.873770*S + 1602.312433*P + U_T"
+      }
+    },
+    "D": {
+      "type": "endogenous",
+      "dependencies": [
+        "E",
+        "X",
+        "S",
+        "P",
+        "T"
+      ],
+      "intercept": 5376.2487541965465,
+      "coefficients": {
+        "E": -9.213093520824977,
+        "X": -0.007487962267125281,
+        "S": -7.508967846150224,
+        "P": -614.9850985987039,
+        "T": 0.8966015559680378
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.4266872364032317,
+        "r2_score": 0.999633610535278,
+        "function": "D = 5376.248754 - 9.213094*E - 0.007488*X - 7.508968*S - 614.985099*P + 0.896602*T + U_D"
+      }
+    },
+    "O": {
+      "type": "endogenous",
+      "dependencies": [
+        "E",
+        "X",
+        "S",
+        "P",
+        "T",
+        "D"
+      ],
+      "intercept": -8.744618977593667,
+      "coefficients": {
+        "E": 0.03331814074539202,
+        "X": 0.00012786455006639488,
+        "S": -0.03494652734316776,
+        "P": 1.035174668021181,
+        "T": 0.009315919543335063,
+        "D": -0.008630916137914203
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.001958773290425484,
+        "r2_score": 0.9998678298731101,
+        "function": "O = -8.744619 + 0.033318*E + 0.000128*X - 0.034947*S + 1.035175*P + 0.009316*T - 0.008631*D + U_O"
+      }
+    },
+    "C": {
+      "type": "endogenous",
+      "dependencies": [
+        "E",
+        "X",
+        "S",
+        "P",
+        "T",
+        "D",
+        "O"
+      ],
+      "intercept": -48.86041514157217,
+      "coefficients": {
+        "E": 0.04617489574122442,
+        "X": 0.00041036041229537733,
+        "S": 0.08983564965888363,
+        "P": 6.094082352622404,
+        "T": -0.024749146327993403,
+        "D": 0.023807401471337995,
+        "O": 1.5361343960468692
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 0.03577423282158197,
+        "r2_score": 0.17877548940194965,
+        "function": "C = -48.860415 + 0.046175*E + 0.000410*X + 0.089836*S + 6.094082*P - 0.024749*T + 0.023807*D + 1.536134*O + U_C"
+      }
+    },
+    "Y": {
+      "type": "endogenous",
+      "dependencies": [
+        "N",
+        "O",
+        "C"
+      ],
+      "intercept": 15.743108201822231,
+      "coefficients": {
+        "N": 0.34924732824657834,
+        "O": -4.072341419068553,
+        "C": 2.804860360883661
+      },
+      "relationship_type": "linear",
+      "relationship_params": {
+        "noise_std": 1.632281246730356,
+        "r2_score": 0.20443029703992455,
+        "function": "Y = 15.743108 + 0.349247*N - 4.072341*O + 2.804860*C + U_Y"
+      }
+    }
+  },
+  "causal_order": [
+    "L",
+    "E",
+    "N",
+    "X",
+    "S",
+    "P",
+    "T",
+    "D",
+    "O",
+    "C",
+    "Y"
+  ],
+  "intervention": [
+    "L",
+    "E",
+    "X",
+    "S",
+    "P"
+  ],
+  "interventional_domain": {
+    "L": [
+      378.73,
+      6109.3
+    ],
+    "E": [
+      18.28,
+      29.5
+    ],
+    "X": [
+      306.9025,
+      535.2337
+    ],
+    "S": [
+      36.169,
+      36.8806
+    ],
+    "P": [
+      7.9263,
+      8.1414
+    ]
+  },
+  "target": "Y",
+  "max_intervention_set_size": 1,
+  "num_observations": 46,
+  "task": "min"
+}

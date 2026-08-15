@@ -1,0 +1,26 @@
+target: PSA
+
+num_intervention: 1
+intervention:
+  - Aspirin
+  - Statin
+
+num_observations: 250
+
+task: min
+
+interventional_domain:
+  Aspirin:
+  - 0
+  - 1
+  Statin:
+  - 0
+  - 1
+
+g_thr: 0.4
+
+
+Variable_description:
+  Aspirin: The amount of aspirin the patient takes
+  Statin: The amount of statin the patient takes
+  PSA: The PSA level of the patient

@@ -1,0 +1,6 @@
+{
+  "dataset": "rosenbrock_d5",
+  "target": "Y",
+  "task": "max",
+  "global_best_value": 0.0
+}

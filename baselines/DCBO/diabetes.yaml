@@ -1,0 +1,30 @@
+cols_to_drop:
+
+predetermined_exogenous_vars:
+  - Age
+
+target: Outcome
+
+num_intervention: 1
+intervention:
+  - Insulin
+  - BloodPressure
+
+num_observations: 250
+
+task: min
+
+interventional_domain:
+  Insulin:
+  - 0
+  - 846
+  BloodPressure:
+  - 0
+  - 122
+
+g_thr: 0.4
+
+Variable_description:
+  Insulin: The amount of insulin the patient takes
+  BloodPressure: The blood pressure of the patient
+  Outcome: The possibility of the patient to have diabetes
