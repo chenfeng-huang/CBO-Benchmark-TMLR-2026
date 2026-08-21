@@ -220,10 +220,12 @@ Metrics reported per method:
 ## Citation
 
 ```bibtex
-@article{huang2026cbo,
-  title   = {Causal Bayesian Optimization: Foundations, Methods, and Applications},
-  author  = {Huang, Chenfeng and Le, Thuy T. and Ma, Zixuan and Tran, Hien},
-  journal = {Transactions on Machine Learning Research},
-  year    = {2026}
+@article{huang2026CBO,
+  title={Causal Bayesian Optimization: Foundations, Methods, and Applications},
+  author={Chenfeng Huang and Thuy T. Le and Zixuan Ma and Hien Tran},
+  journal={Transactions on Machine Learning Research},
+  issn={2835-8856},
+  year={2026},
+  url={https://openreview.net/forum?id=XT6DC37m5I}
 }
 ```
